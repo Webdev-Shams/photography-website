@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const SignUp = () => {
     const nameRef = useRef('');
@@ -20,7 +21,7 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     if(loading || updating){
-        return <BiDotsHorizontalRounded></BiDotsHorizontalRounded>
+        return <Loading></Loading>
     }
 
     const handleRegister = async (event) => {

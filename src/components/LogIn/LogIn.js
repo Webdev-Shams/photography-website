@@ -3,6 +3,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 
 const LogIn = () => {
@@ -23,12 +24,11 @@ const LogIn = () => {
     let from = location.state?.from?.pathname || "/";
 
     if(loading || sending){
-        return <BiDotsHorizontalRounded></BiDotsHorizontalRounded>
+        return <Loading></Loading>
     }
 
     if (user) {
         navigate(from, { replace: true });
-        console.log(navigate);
     }
 
     const handleSubmit = event => {
@@ -53,8 +53,6 @@ const LogIn = () => {
                 <input type="submit" value="Log In" />
             </form>
             </div>
-            
-            
         </div>
     );
 };
