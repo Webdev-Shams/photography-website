@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import './SignUp.css'
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
@@ -40,17 +41,17 @@ const SignUp = () => {
 
     return (
         <div className='pt-32 text-center'>
-            <h2 className='text-6xl text-center font-semibold
-            text-white mt-2'>Please SignUp</h2>
-            <div>
+            <h2 className='text-4xl md:text-6xl text-center font-semibold
+            text-white mt-2 mb-9'>Please <span className='text-blue-500 font-bold'>SignUp</span> </h2>
+            <div className='formContainer'>
             <form onSubmit={handleRegister}>
-                <input className='mb-4' type="text" name="name"/>
+                <input className='mb-4' type="text" name="name" placeholder='Enter Your Name'/>
                 <br />
-                <input ref={emailRef} className='mb-4' type="email" name="email"/>
+                <input ref={emailRef} className='mb-4' type="email" name="email" placeholder='Enter Your Email'/>
                 <br />
-                <input ref={passwordRef} className='mb-3' type="password" name="password"/>
+                <input ref={passwordRef} className='mb-3' type="password" name="password" placeholder='Enter Your Password'/>
                 <br />
-                <input type="submit" value="Sign Up" />
+                <input className='submitBtn' type="submit" value="Sign Up" />
             </form>
             </div>
             

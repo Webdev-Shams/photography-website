@@ -1,0 +1,36 @@
+.formContainer {
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 5px;
+    box-shadow: -8px 10px #191919;
+}
+
+input {
+    background-color: rgba(240, 248, 255, 0);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(188, 188, 188);
+}
+
+input:focus {
+    font-size: 21px;
+}
+
+.submitBtn {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(59 130 246);
+    padding: 8px 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: rgb(40, 106, 213);
+}

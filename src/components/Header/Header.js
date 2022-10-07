@@ -63,7 +63,7 @@ const Header = () => {
                                 :
                                 
                                     <ul>
-                                        <li className='sm:mb-8'><Link to="login">
+                                        <li className='mb-8'><Link to="login">
                                         Login
                                         </Link>
                                         </li>

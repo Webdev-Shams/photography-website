@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import './LogIn.css'
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
@@ -42,15 +43,15 @@ const LogIn = () => {
 
     return (
         <div className='pt-32 text-center'>
-            <h2 className='text-6xl text-center font-semibold
-            text-white mt-2'>Please Login</h2>
-            <div>
+            <h2 className='text-4xl md:text-6xl text-center font-semibold
+            text-white mt-2 mb-9'>Please <span className='text-blue-500 font-bold'>LogIn</span> </h2>
+            <div className='formContainer'>
             <form onSubmit={handleSubmit}>
-                <input ref={emailRef} type="email" name="email"/>
+                <input className='mb-5' ref={emailRef} type="email" name="email" placeholder='Enter Your Email'/>
                 <br />
-                <input ref={passwordRef} type="password" name="password"/>
+                <input ref={passwordRef} type="password" name="password" placeholder='Enter Your Password'/>
                 <br />
-                <input type="submit" value="Log In" />
+                <input className='submitBtn' type="submit" value="Log In" />
             </form>
             </div>
         </div>
