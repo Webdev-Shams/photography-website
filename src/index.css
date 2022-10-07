@@ -36,3 +36,11 @@ code {
   display: block;
   width: 100%;
 }
+
+.footerDiv {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #2525256f;
+}

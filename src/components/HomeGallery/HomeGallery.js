@@ -13,10 +13,9 @@ const HomeGallery = () => {
     <div className="boss">
       <div className="imgGallery" style={{ columns: 3, columnGap: 0 }}>
         {images.slice(0, 5).map((image, i) => (
-          <a className="imgLink" href={image} target="_blank" rel="noreferrer">
+          <a key={i} className="imgLink" href={image} target="_blank" rel="noreferrer">
             <img
               className="image"
-              key={i}
               src={image}
               alt="pic"
               style={{ padding: 2.5 }}

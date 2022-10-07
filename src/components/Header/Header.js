@@ -3,17 +3,25 @@ import { Link } from 'react-router-dom';
 import { FiGrid } from "react-icons/fi";
 import { BiXCircle } from "react-icons/bi";
 import { IoMdCamera } from "react-icons/io";
+import { signOut } from 'firebase/auth';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const Header = () => {
     const [active,setActive] = useState(false)
+    const [user] = useAuthState(auth);
 
     const showMenu = () => {
         setActive(!active)
     }
 
+    const handleSignOut = () =>{
+        signOut(auth);
+    }
+
     return (
-        <div className='fixed w-full backdrop-blur-sm text-white flex justify-between px-6 py-2 items-center border-b border-white'>
+        <div className='fixed w-full md:backdrop-blur-sm text-white flex justify-between px-6 py-4 items-center border-b border-white'>
 
                 <div className='text-2xl font-bold text-center '>
                     <h1><IoMdCamera className='inline text-blue-500'/> <span className='text-2xl'>Clickography</span></h1>
@@ -29,15 +37,43 @@ const Header = () => {
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/gallery">Gallery</Link></li>
                             <li><Link to="/about">About</Link></li>
+                            {
+                                user ?
+                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>sign out</button>
+                                :
+                                <li>
+                                    <Link className='mr-6' to="login">
+                                    Login
+                                    </Link>
+                                    <Link to="signup">
+                                    Sign Up
+                                    </Link>
+                                </li>
+                            }
                         </ul>
 
-                        <ul className={active ? 'flex-col flex items-center fixed inset-0 left-1/4 uppercase bg-black/40 backdrop-blur-lg gap-8 justify-center p-8 md:hidden' : 'hidden'}>
+                        <ul className={active ? 'flex-col flex items-center fixed inset-0 left-2/4 uppercase bg-black/40 backdrop-blur-lg gap-8 justify-center md:hidden' : 'hidden'}>
                             <BiXCircle onClick={showMenu} className='cursor-pointer text-4xl'/>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/gallery">Gallery</Link></li>
                             <li><Link to="/about">About</Link></li>
+                            {
+                                user ?
+                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>sign out</button>
+                                :
+                                
+                                    <ul>
+                                        <li className='sm:mb-8'><Link to="login">
+                                        Login
+                                        </Link>
+                                        </li>
+                                        <li>
+                                        <Link to="signup">
+                                        Signup
+                                        </Link></li>
+                                    </ul>
+                                                                }
                         </ul>
-
             </nav>
         </div>
     );
