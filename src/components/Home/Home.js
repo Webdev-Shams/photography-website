@@ -1,22 +1,20 @@
 import React from "react";
 import './Home.css'
-import AkibSadat from '../../images/AkibSadat-sm.jpg'
+import HomeGallery from './HomeGallery/HomeGallery'
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import Hero from "./Hero/Hero";
+import Services from "./Services/Services";
 
 const Home = () => {
   return (
     <div>
-      <div className="heroSection grid grid-cols-1 md:grid-cols-2 items-center text-center">
-        <div className="heroText text-white">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl	font-bold">Hey, I'm Akib.</h1>
-          <p className="text-2xl mt-5 font-semibold">Professional wildlife <span className="text-blue-500 font-bold">Photographer</span>.</p>
-        </div>
-        <div className="heroImage">
-          <img
-            src={AkibSadat}
-            alt="akib-sadat"
-          />
-        </div>
+      <Hero></Hero>
+      <div className="serviceContainer">
+        <Services></Services>
       </div>
+      <HomeGallery></HomeGallery>
+      
     </div>
   );
 };

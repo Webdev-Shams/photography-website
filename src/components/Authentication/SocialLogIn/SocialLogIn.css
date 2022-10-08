@@ -1,0 +1,11 @@
+.socialIconContainer {
+    max-width: 150px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+
+.socialSvg:hover {
+    background-color: #286AD5;
+    color: white;
+}

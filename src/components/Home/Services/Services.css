@@ -1,0 +1,33 @@
+.service {
+    padding: 30px 15px;
+    margin: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid #191919;
+    box-shadow: -8px 10px #191919;
+}
+
+.platinum {
+    background-color: #286AD5;
+}
+
+.arrow {
+    display: inline-block;
+    background-color: #286AD5;
+    padding: 5px;
+    margin-top: 18px;
+    color: white;
+    font-size: 50px;
+    border: 2px solid #286AD5;
+    border-radius: 50%;
+}
+
+.arrowPlatinum {
+    display: inline-block;
+    background-color: #191919;
+    padding: 5px;
+    margin-top: 18px;
+    color: white;
+    font-size: 50px;
+    border: 2px solid #191919;
+    border-radius: 50%;
+}

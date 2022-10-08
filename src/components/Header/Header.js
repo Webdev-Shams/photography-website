@@ -39,7 +39,7 @@ const Header = () => {
                             <li><Link to="/about">About</Link></li>
                             {
                                 user ?
-                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>sign out</button>
+                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>SIGN OUT</button>
                                 :
                                 <li>
                                     <Link className='mr-6' to="login">
@@ -59,7 +59,7 @@ const Header = () => {
                             <li><Link to="/about">About</Link></li>
                             {
                                 user ?
-                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>sign out</button>
+                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>SIGN OUT</button>
                                 :
                                 
                                     <ul>
@@ -69,7 +69,7 @@ const Header = () => {
                                         </li>
                                         <li>
                                         <Link to="signup">
-                                        Signup
+                                        Sign up
                                         </Link></li>
                                     </ul>
                                                                 }

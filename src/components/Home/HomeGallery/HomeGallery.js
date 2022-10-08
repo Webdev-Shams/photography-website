@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomeGallery = () => {
   const [images, setImages] = useState([]);
@@ -10,7 +11,8 @@ const HomeGallery = () => {
   }, []);
 
   return (
-    <div className="boss">
+    <div className="text-center mb-9">
+      <h1 className="mt-9 mb-9 text-5xl md:text-6xl text-white font-light text-center">My Clicks</h1>
       <div className="imgGallery" style={{ columns: 3, columnGap: 0 }}>
         {images.slice(0, 5).map((image, i) => (
           <a key={i} className="imgLink" href={image} target="_blank" rel="noreferrer">
@@ -23,6 +25,7 @@ const HomeGallery = () => {
           </a>
         ))}
       </div>
+      <Link className="submitBtn" to="/gallery">See More</Link>
     </div>
   );
 };
