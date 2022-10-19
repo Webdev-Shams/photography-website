@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d8ea24c.css",
+    "main.js": "/static/js/main.870a8392.js",
+    "static/js/787.3474d335.chunk.js": "/static/js/787.3474d335.chunk.js",
+    "static/media/AkibSadat.jpg": "/static/media/AkibSadat.ddf8859622f9bf37b5bf.jpg",
+    "static/media/AkibSadat-sm.jpg": "/static/media/AkibSadat-sm.8ac96d89bcd01680c525.jpg",
+    "index.html": "/index.html",
+    "main.5d8ea24c.css.map": "/static/css/main.5d8ea24c.css.map",
+    "main.870a8392.js.map": "/static/js/main.870a8392.js.map",
+    "787.3474d335.chunk.js.map": "/static/js/787.3474d335.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d8ea24c.css",
+    "static/js/main.870a8392.js"
+  ]
+}

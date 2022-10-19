@@ -1,0 +1,14 @@
+nav a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: white;
+    transition: border-left 0.2s ease-in-out;
+}
+
+nav a:hover,
+.active {
+    color: #286ad5;
+    font-weight: 700;
+    border-left: 3px solid #286ad5;
+    padding-left: 3px;
+}

@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FiGrid } from "react-icons/fi";
 import { BiXCircle } from "react-icons/bi";
 import { IoMdCamera } from "react-icons/io";
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import './Header.css';
 
 
 const Header = () => {
-    const [active,setActive] = useState(false)
+    const [on,seton] = useState(false)
     const [user] = useAuthState(auth);
 
     const showMenu = () => {
-        setActive(!active)
+        seton(!on)
     }
 
     const handleSignOut = () =>{
@@ -34,43 +35,43 @@ const Header = () => {
                     </div>
 
                         <ul className='hidden md:flex gap-8 p-6 uppercase'>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/gallery">Gallery</Link></li>
-                            <li><Link to="/about">About</Link></li>
+                            <li><NavLink to="/home">Home</NavLink></li>
+                            <li><NavLink to="/gallery">Gallery</NavLink></li>
+                            <li><NavLink to="/about">About Dev</NavLink></li>
                             {
                                 user ?
-                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>SIGN OUT</button>
+                                    <button className='btn btn-NavLink text-white text-decoration-none' onClick={handleSignOut}>SIGN OUT</button>
                                 :
                                 <li>
-                                    <Link className='mr-6' to="login">
+                                    <NavLink className='mr-6' to="login">
                                     Login
-                                    </Link>
-                                    <Link to="signup">
+                                    </NavLink>
+                                    <NavLink to="signup">
                                     Sign Up
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             }
                         </ul>
 
-                        <ul className={active ? 'flex-col flex items-center fixed inset-0 left-2/4 uppercase bg-black/40 backdrop-blur-lg gap-8 justify-center md:hidden' : 'hidden'}>
+                        <ul className={on ? 'flex-col flex items-center fixed inset-0 left-2/4 uppercase bg-black/40 backdrop-blur-lg gap-8 justify-center md:hidden' : 'hidden'}>
                             <BiXCircle onClick={showMenu} className='cursor-pointer text-4xl'/>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/gallery">Gallery</Link></li>
-                            <li><Link to="/about">About</Link></li>
+                            <li><NavLink to="/home">Home</NavLink></li>
+                            <li><NavLink to="/gallery">Gallery</NavLink></li>
+                            <li><NavLink to="/about">About Dev</NavLink></li>
                             {
                                 user ?
-                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>SIGN OUT</button>
+                                    <button className='btn btn-NavLink text-white text-decoration-none' onClick={handleSignOut}>SIGN OUT</button>
                                 :
                                 
                                     <ul>
-                                        <li className='mb-8'><Link to="login">
+                                        <li className='mb-8'><NavLink to="login">
                                         Login
-                                        </Link>
+                                        </NavLink>
                                         </li>
                                         <li>
-                                        <Link to="signup">
+                                        <NavLink to="signup">
                                         Sign up
-                                        </Link></li>
+                                        </NavLink></li>
                                     </ul>
                                                                 }
                         </ul>
