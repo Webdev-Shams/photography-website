@@ -1,5 +1,4 @@
 import React from 'react';
-import { CgShapeHalfCircle } from 'react-icons/cg';
 import './Loading.css';
 
 const Loading = () => {

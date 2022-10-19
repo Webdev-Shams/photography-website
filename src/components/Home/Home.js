@@ -13,7 +13,9 @@ const Home = () => {
       <div className="serviceContainer">
         <Services></Services>
       </div>
-      <HomeGallery></HomeGallery>
+      <div className="homeGalleryContainer">
+        <HomeGallery></HomeGallery>
+      </div>
       
     </div>
   );

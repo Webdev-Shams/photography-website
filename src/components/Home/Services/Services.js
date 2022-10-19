@@ -12,20 +12,20 @@ const Services = () => {
                 <div className="service">
                     <p className="text-4xl mb-4 text-blue-500 font-semibold">Silver Click</p>
                     <p className="text-4xl mb-9 font-thin">50 Photos</p>
-                    <p className="text-4xl font-bold">$100.00</p>
-                    <Link><AiOutlineArrowRight className="arrow"></AiOutlineArrowRight></Link>
+                    <p className="text-5xl font-bold">$100.00</p>
+                    <Link to='/checkout'><AiOutlineArrowRight className="arrow"></AiOutlineArrowRight></Link>
                 </div>
                 <div className="service">
                     <p className="text-4xl mb-4 text-blue-500 font-semibold">Gold Click</p>
                     <p className="text-4xl mb-9 font-thin">200 Photos</p>
                     <p className="text-5xl font-bold">$350.00</p>
-                    <Link><AiOutlineArrowRight className="arrow"></AiOutlineArrowRight></Link>
+                    <Link to='/checkout'><AiOutlineArrowRight className="arrow"></AiOutlineArrowRight></Link>
                 </div>
                 <div className="service platinum">
                     <p className="text-4xl mb-4 font-semibold text-zinc-800	">Platinum Click</p>
                     <p className="text-4xl mb-9 font-thin text-zinc-800	">500 Photos</p>
                     <p className="text-5xl font-bold">$800.00</p>
-                    <Link><AiOutlineArrowRight className="arrowPlatinum"></AiOutlineArrowRight></Link>
+                    <Link to='/checkout'><AiOutlineArrowRight className="arrowPlatinum"></AiOutlineArrowRight></Link>
                 </div>
                 </div>
             </div>

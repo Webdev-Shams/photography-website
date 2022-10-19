@@ -23,7 +23,7 @@ const LogIn = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-    let from = location.state?.from?.pathname || "/";
+    let from = location?.state?.from?.pathname || '/';
     let errorElement;
 
     if(loading || sending){
@@ -35,7 +35,7 @@ const LogIn = () => {
     }
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorElement = <p className='text-red-500'>Error: {error?.message}</p>
     }
 
     const handleSubmit = event => {

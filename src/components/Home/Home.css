@@ -1,4 +1,10 @@
 .serviceContainer {
     max-width: 1100px;
     margin: 0 auto;
+    padding-top: 50px;
+}
+
+.homeGalleryContainer {
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
